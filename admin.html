@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CERIS Atelier — Admin</title>
+  <meta name="description" content="CERIS studio administration. Product, order, and customer management placeholder for future backend integration.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="index.html">CERIS<span>Atelier</span></a>
+      <div class="nav-actions">
+        <a class="btn btn--small btn--ghost" href="index.html">View Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <form class="admin-login" data-admin-login>
+      <div>
+        <p class="eyebrow">Studio Access</p>
+        <h1>Atelier</h1>
+        <p>This panel is prepared for future product, price, and order management. No live backend is connected yet.</p>
+        <div class="field">
+          <label for="admin-user">Username</label>
+          <input id="admin-user" name="user" autocomplete="username">
+          <div class="field-error"></div>
+        </div>
+        <div class="field">
+          <label for="admin-pass">Password</label>
+          <input id="admin-pass" name="password" type="password" autocomplete="current-password">
+          <div class="field-error" aria-live="polite"></div>
+        </div>
+        <button class="btn" type="submit">Enter</button>
+        <p>Demo access: <strong>admin</strong> / <strong>ceris</strong></p>
+      </div>
+    </form>
+
+    <div class="admin-shell" data-admin-app hidden>
+      <aside class="admin-side">
+        <p class="eyebrow">CERIS</p>
+        <button type="button" class="is-active" data-admin-view="dashboard">Dashboard</button>
+        <button type="button" data-admin-view="products">Products</button>
+        <button type="button" data-admin-view="orders">Orders</button>
+        <button type="button" data-admin-view="customers">Customers</button>
+        <button type="button" data-admin-view="settings">Settings</button>
+        <button type="button" data-admin-logout>Sign out</button>
+      </aside>
+      <section class="admin-main">
+        <div data-panel="dashboard">
+          <h2>Dashboard</h2>
+          <p>A placeholder overview. Connect a backend to manage live inventory, pricing, and fulfilment.</p>
+          <div class="stat-grid">
+            <article class="stat"><span>Products</span><strong data-stat-products>2</strong></article>
+            <article class="stat"><span>Stored orders</span><strong data-stat-orders>0</strong></article>
+            <article class="stat"><span>Collection status</span><strong>Live</strong></article>
+          </div>
+        </div>
+        <div data-panel="products" hidden>
+          <h2>Products</h2>
+          <p>Catalog is currently sourced from <code>js/products.js</code>. Future admin actions: add products, edit copy, change prices, upload images.</p>
+          <table>
+            <thead>
+              <tr><th>SKU</th><th>Name</th><th>Category</th><th>Price</th><th>Status</th></tr>
+            </thead>
+            <tbody data-admin-products></tbody>
+          </table>
+        </div>
+        <div data-panel="orders" hidden>
+          <h2>Orders</h2>
+          <p>Orders placed through checkout are stored locally in this browser until a server is connected.</p>
+          <table>
+            <thead>
+              <tr><th>Reference</th><th>Customer</th><th>Total</th><th>Payment</th></tr>
+            </thead>
+            <tbody data-admin-orders></tbody>
+          </table>
+        </div>
+        <div data-panel="customers" hidden>
+          <h2>Customers</h2>
+          <p>Customer profiles will appear here after CRM integration. Newsletter signups are stored locally for now.</p>
+        </div>
+        <div data-panel="settings" hidden>
+          <h2>Settings</h2>
+          <p>Brand name, shipping thresholds, and payment providers can be wired to this panel later without rebuilding the storefront.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

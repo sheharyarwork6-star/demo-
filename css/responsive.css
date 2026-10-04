@@ -1,0 +1,155 @@
+@media (max-width: 1100px) {
+  .hero,
+  .split,
+  .newsletter,
+  .pdp,
+  .cart-layout,
+  .checkout-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__copy,
+  .split__copy {
+    padding: 64px 0;
+  }
+
+  .feature-grid,
+  .instagram-grid,
+  .footer-grid,
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .story-block,
+  .story-block:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .story-block:nth-child(even) .story-copy {
+    order: 0;
+  }
+
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --header: 72px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+    order: -1;
+  }
+
+  .mobile-drawer {
+    display: block;
+    position: fixed;
+    inset: var(--header) 0 0 0;
+    background: rgba(248, 247, 244, 0.97);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 32px 24px;
+    z-index: 35;
+  }
+
+  .mobile-drawer.is-open {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .mobile-drawer a {
+    display: block;
+    font-family: var(--serif);
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+
+  .product-grid,
+  .form-grid,
+  .feature-grid,
+  .instagram-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter,
+  .form-card,
+  .summary-card,
+  .split__copy {
+    padding: 32px 22px;
+  }
+
+  .newsletter form,
+  .hero__actions,
+  .product-actions,
+  .footer-bottom,
+  .product-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart-line {
+    grid-template-columns: 88px 1fr;
+  }
+
+  .cart-line__total {
+    grid-column: 2;
+  }
+
+  .story-block img,
+  .split__media img,
+  .hero__media img {
+    min-height: 360px;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .btn,
+  .chip,
+  .icon-btn {
+    min-height: 48px;
+  }
+
+  .container {
+    width: min(var(--max), calc(100% - 32px));
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    letter-spacing: 0.18em;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: 0.22em;
+  }
+
+  .page-hero {
+    padding-top: 24px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .gallery__thumbs img {
+    height: 72px;
+  }
+}

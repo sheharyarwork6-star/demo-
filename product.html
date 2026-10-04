@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — CERIS by Gamians</title>
+  <meta name="description" content="Explore CERIS luxury skincare. View benefits, ingredients, and how to use each essential formula.">
+  <meta property="og:title" content="CERIS Product">
+  <meta property="og:description" content="Luxury skincare essentials by CERIS by Gamians.">
+  <meta property="og:image" content="assets/images/cleanser-1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open menu"><span></span></button>
+      <a class="logo" href="index.html">CERIS<span>by Gamians</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" data-open-search aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="6.5"/><path d="M16.2 16.2L21 21"/></svg>
+        </button>
+        <a class="icon-btn" href="cart.html" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 11H7L6 8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg>
+          <span class="cart-count" data-cart-count hidden>0</span>
+        </a>
+        <a class="icon-btn" href="admin.html" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3.2 3.8-4.8 7-4.8s5.6 1.6 7 4.8"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div class="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html">Bag</a>
+  </div>
+
+  <main id="main" class="container" data-product-page>
+    <section class="pdp">
+      <div class="gallery">
+        <div class="gallery__main">
+          <img data-gallery-main src="assets/images/cleanser-1.jpg" alt="CERIS product">
+        </div>
+        <div class="gallery__thumbs" data-gallery-thumbs></div>
+      </div>
+      <div>
+        <p class="eyebrow" data-pdp-eyebrow>Cleanser</p>
+        <h1 data-pdp-name>Marshmallow Skin Cleanser</h1>
+        <p class="pdp-price" data-pdp-price>$42.00</p>
+        <p data-pdp-short></p>
+        <div class="product-actions">
+          <div class="qty" data-local-qty>
+            <button type="button" data-delta="-1" aria-label="Decrease quantity">−</button>
+            <input data-qty type="number" min="1" value="1" aria-label="Quantity">
+            <button type="button" data-delta="1" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn" type="button" data-add-to-cart="marshmallow-skin-cleanser">Add to Cart</button>
+          <button class="btn btn--ghost" type="button" data-buy-now>Buy Now</button>
+        </div>
+        <div class="accordion" data-accordion-group>
+          <div class="accordion__item is-open" data-accordion>
+            <button type="button" aria-expanded="true">Description</button>
+            <div class="accordion__panel" style="max-height: 240px;">
+              <div data-pdp-long></div>
+            </div>
+          </div>
+          <div class="accordion__item" data-accordion>
+            <button type="button" aria-expanded="false">Benefits</button>
+            <div class="accordion__panel"><div><ul data-benefits></ul></div></div>
+          </div>
+          <div class="accordion__item" data-accordion>
+            <button type="button" aria-expanded="false">Key Ingredients</button>
+            <div class="accordion__panel"><div><ul data-ingredients></ul></div></div>
+          </div>
+          <div class="accordion__item" data-accordion>
+            <button type="button" aria-expanded="false">How to Use</button>
+            <div class="accordion__panel"><div><ol data-how-to-use></ol></div></div>
+          </div>
+          <div class="accordion__item" data-accordion>
+            <button type="button" aria-expanded="false">Shipping &amp; Returns</button>
+            <div class="accordion__panel">
+              <div>
+                <p>Orders are prepared with care and typically dispatched within 2–4 business days. Complimentary shipping applies to orders over $90.</p>
+                <p>Unused items may be returned within 14 days of delivery. Please see our <a href="shipping.html">shipping &amp; returns</a> page for details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Continue</p>
+        <h2>Related Products</h2>
+      </div>
+      <div class="product-grid" data-related></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html">CERIS</a>
+          <p>Luxury skincare, thoughtfully created. CERIS by Gamians designs essential formulas for radiant, modern skin.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product.html?id=marshmallow-skin-cleanser">Cleanser</a></li>
+            <li><a href="product.html?id=ceris-brightening-cream">Brightening Cream</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="shipping.html">Shipping</a></li>
+            <li><a href="shipping.html">Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://instagram.com/cerisbygamians" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year></span> CERIS by Gamians. All Rights Reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+  <div class="search-modal" hidden>
+    <form role="search">
+      <div class="field">
+        <label class="eyebrow" for="site-search">Search CERIS</label>
+        <input id="site-search" type="search">
+      </div>
+      <button class="btn" type="submit">Search</button>
+      <button class="btn btn--ghost" type="button" data-close-search>Close</button>
+    </form>
+  </div>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
